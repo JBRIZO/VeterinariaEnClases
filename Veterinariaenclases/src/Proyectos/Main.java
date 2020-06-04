@@ -78,12 +78,7 @@ public class Main {
                     case 3:
                         boolean salir4 = false;
                         while (!salir4) {
-                            System.out.println("           Menu de reportes");
-                            System.out.println("****************************************");
-                            System.out.println("1. Reporte de citas");
-                            System.out.println("2. Reporte de diagnosticos");
-                            System.out.println("3. Menu principal");
-                            System.out.println("****************************************");
+                            menu.reportes();
                             try {
                                 int opcion3 = sc.nextInt();
                                 switch (opcion3) {

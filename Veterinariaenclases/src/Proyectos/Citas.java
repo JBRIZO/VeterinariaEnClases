@@ -149,6 +149,7 @@ public class Citas {
     {
         if (cont == 0){
             System.out.println("No se ha agendado ninguna cita");
+            System.out.println("");
         }else {
             for (int i = 1; i < (cont + 1); i++) {
                 System.out.println("____________________________________________");
