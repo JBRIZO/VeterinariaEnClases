@@ -6,6 +6,7 @@ import java.util.*;
 
 public class Citas {
 
+    private Scanner sc = new Scanner(System.in);
     private LocalTime[] horas = new LocalTime[11];
     private String[] estado = new String[11];
     private LocalDate[] fechas = new LocalDate[11];
@@ -57,7 +58,6 @@ public class Citas {
 
     public void agendarCita()
     {
-        Scanner sc = new Scanner(System.in);
         cont++;
         if (cont > 9) {
             System.out.println("Ya no hay cupo para mas citas");
@@ -143,6 +143,25 @@ public class Citas {
             }
         }
 
+    }
+
+    public void mostrarCitas()
+    {
+        if (cont == 0){
+            System.out.println("No se ha agendado ninguna cita");
+        }else {
+            for (int i = 1; i < (cont + 1); i++) {
+                System.out.println("____________________________________________");
+                System.out.println("Cita numero " + i);
+                System.out.println("Fecha: " + fechas[i]);
+                System.out.println("Hora: " + horas[i]);
+                System.out.println("Nombre del cliente: " + nombre[i]);
+                System.out.println("Nombre de la mascota: " + nombreMascota[i]);
+                System.out.println("Estado de la cita: " + estado[i]);
+                System.out.println("____________________________________________");
+                System.out.println("");
+            }
+        }
     }
 
 }
