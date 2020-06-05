@@ -73,21 +73,29 @@ public class Diagnosticos {
         System.out.println("Mascota: "+ nombreMascotaDagnostico[numDiag]);
         System.out.println("Con el siguiente diagnostico: " + diagnostico[numDiag]);
         System.out.println("¿Desea eliminar este diagnostico?(S/N)");
-        String confirmacion = sc.next();
-        if (confirmacion.equals(positivo)){
-            diagnostico[numDiag] = "No existe diagnostico";
-            System.out.println("----------------------------------");
-            System.out.println("El diagnostico ha sido eliminado.");
-            System.out.println("----------------------------------");
-        }else{
-            if (confirmacion.equals(negativo))
-            {
+
+        int x = 0;
+        while(x == 0)
+        {
+            String confirmacion = sc.next();
+            if (confirmacion.equals(positivo)){
+                diagnostico[numDiag] = "No existe diagnostico";
                 System.out.println("----------------------------------");
-                System.out.println("El diagnostico no sera eliminado");
+                System.out.println("El diagnostico ha sido eliminado.");
                 System.out.println("----------------------------------");
+                x = 1;
             }else{
-                System.out.println("Ingrese un valor valido");
+                if (confirmacion.equals(negativo))
+                {
+                    System.out.println("----------------------------------");
+                    System.out.println("El diagnostico no sera eliminado");
+                    System.out.println("----------------------------------");
+                    x = 1;
+                }else{
+                    System.out.println("Ingrese un valor valido");
+                }
             }
+
         }
 
 
